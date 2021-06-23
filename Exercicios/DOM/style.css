@@ -1,0 +1,50 @@
+* {
+    background-color: #000;
+    color: #fff;
+}
+fieldset {
+    margin: 20px;
+}
+legend {
+    font-size: 18px;
+}
+fieldset .imagem {
+    height: 200px;
+}
+
+
+
+#exemplo2 {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    border: 1px solid #fff;
+}
+.verde {
+    background-color: green;
+}
+.vermelho {
+    background-color: red;
+    color: #000;
+}
+.azul {
+    background-color: rgb(20, 78, 202);
+}
+
+
+
+#exemplo3 {
+    margin: 50px 20px 20px 20px;
+}
+#exemplo3 button {
+    padding: 20px 50px;
+}
+
+/* Dimensões */
+.texto {
+    height: 200px;
+    width: 200px;
+    overflow: auto;
+    background-color: #333;
+    padding: 5px;
+}

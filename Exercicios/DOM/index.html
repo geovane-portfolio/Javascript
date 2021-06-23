@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Exemplo 1</legend>
+
+    <div id="exemplo">Geovane</div>
+
+    <div class="lista">
+        Arroz,Feijão,Macorrão.
+    </div>
+
+    <div class="lista">
+        Àgua, Refrigerante, Cerveja.
+    </div>
+
+    <button>Algum botão</button>
+
+    <input type="text" name="email" placeholder="email"/>
+
+    <input type="text" name="telefone" placeholder="fone"/>
+    
+    </fieldset>
+
+    <fieldset>
+    <legend>Exemplo 2</legend>
+
+    <div id="exemplo2">Geovane</div>
+
+    <button onclick="verde()">Verde</button>
+    <button onclick="vermelho()">Vermelho</button>
+    <button onclick="azul()">azul</button>
+    
+    </fieldset>
+
+    <fieldset>
+    <legend>Exemplo 3</legend>
+
+    <div id="exemplo3">
+        <button onclick="trocar()">Botão</button>
+    </div>
+    
+    </fieldset>
+
+    <fieldset>
+        <legend>Função alterar</legend>
+
+        <h1 id="titulo">Titulo</h1>
+
+        <input id="campo" type="text" name="usuario" value="Nome dop usuário"/>
+    </fieldset>
+
+    <fieldset>
+        <legend>Manipulando atributos</legend>
+
+        <img src="images/cachorro.jpg" data-animal="Cachorro" class="imagem" /><br/>
+
+        <button onclick="trocarimagem('cachorro.jpg','Cachorro')">Cachorro</button>
+        <button onclick="trocarimagem('gato.jpg','Gato')">Gato</button>
+
+        <button onclick="pegaranimal()">Qual é o animal?</button>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Dimensões</legend>
+
+        <div class="texto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula massa lacus, sit amet blandit leo tincidunt a. Aliquam accumsan libero et ligula luctus, et tincidunt nulla pharetra. Duis fermentum aliquet libero. Nullam cursus libero id leo cursus ultrices. In gravida odio ut finibus dapibus. Cras consequat nibh risus, non placerat quam interdum ac. Cras pulvinar a magna in laoreet. Integer feugiat ex eget diam tempus sagittis. Integer lacinia eleifend auctor. Fusce maximus mattis lorem ac rhoncus.
+        </div>
+    </fieldset>
+
+    <!-- Colocar o script no final do body -->
+    <script src="script.js"></script>
+</body>
+</html>

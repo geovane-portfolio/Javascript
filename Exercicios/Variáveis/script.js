@@ -7,7 +7,7 @@ var y = 15;
 
 var total = x + y;
 
-alert(total);
+// alert(total);
 
 // -----------------------------------------------
 
@@ -24,35 +24,39 @@ document.write(nomecompleto);
 
 // Condicionais
 
+/*
+var hora = 8;
 
-// var hora = 8;
-
-// if (hora < 12 ){
-//     console.log("Bom dia")
-// } else {
-//     console.log( "Não é de manhã" )
-// }
+if (hora < 12 ){
+    console.log("Bom dia")
+} else {
+    console.log( "Não é de manhã" )
+}
+*/
 
 // ------------------------------------------------
  
-// var hora = 14;
+/*
+var hora = 14;
 
-// if (hora < 12 ){
-//     console.log("Bom dia");
-// } else if (hora < 18) {
-//     console.log( "Boa Tarde" );
-// } else if (hora <= 23) {
-//     console.log( "Boa noite" );
-// }
+if (hora < 12 ){
+    console.log("Bom dia");
+} else if (hora < 18) {
+    console.log( "Boa Tarde" );
+} else if (hora <= 23) {
+    console.log( "Boa noite" );
+}
+*/
 
 // -------------------------------------------------
 
+/*
+var hora = 12;
 
-// var hora = 12;
-
-// if (hora >= 12 && hora <18 ){
-//     console.log("Boa Tarde");
-// }
+if (hora >= 12 && hora <18 ){
+    console.log("Boa Tarde");
+}
+*/
 
 // --------------------------------------------------
 
