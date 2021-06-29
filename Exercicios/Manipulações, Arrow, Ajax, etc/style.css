@@ -15,7 +15,6 @@ input {
     padding: 10px;
 }
 
-/* Mudança de estilo */
 
 .verde {
     background-color: green;
@@ -26,11 +25,6 @@ input {
 }
 .azul {
     background-color: rgb(20, 78, 202);
-}
-
-
-#telefone {
-    display: none;
 }
 
 

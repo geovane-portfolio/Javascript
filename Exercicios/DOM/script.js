@@ -158,7 +158,7 @@ function subirTela() {
 
 // ocultar botão no scroll top.
 function ocultarBotao () {
-    if(document.querySelector('.texto2').scrollY === 0) {
+    if(document.querySelector('.texto2').scrollTop === 0) {
         //ocultar botão
         document.querySelector('.scrollbutton').style.display = 'none';
     } else {
