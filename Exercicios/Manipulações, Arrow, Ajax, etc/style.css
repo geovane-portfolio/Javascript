@@ -4,9 +4,13 @@
 }
 fieldset {
     margin: 20px;
+    line-height: 35px;
 }
 legend {
-    font-size: 18px;
+    font-size: 28px;
+}
+h1 {
+    font-size: 20px;
 }
 fieldset .imagem {
     height: 200px;

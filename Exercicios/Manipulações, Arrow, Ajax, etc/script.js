@@ -1,6 +1,6 @@
 let nome = 'Geovane de Sá Ferreira';
 
-//Conta os caracteres 
+//1 .Conta os caracteres 
 let resultado = nome.length; 
 
 
@@ -8,6 +8,8 @@ let resultado = nome.length;
 
 //let resultado2 = nome.indexOf('Sá');
 
+
+// 2. ------------
 let resultado2 = '';// Se a pesquisa não estiver em nome, vai retornar não achou. 
 
 if(nome.indexOf('Silva') > -1) {
@@ -21,22 +23,370 @@ document.querySelector('.demo1').innerHTML = "Número de caracteres: "+resultado
 
 document.querySelector('.demo2').innerHTML = "Achou a string em nome? "+resultado2;
 
-//extrair informações das strings 
+//extrair informações das strings ------------------------------------
 
+// 3. -------------
 let resultado3 = nome.slice(0, 8);//negativo a seleção é de trás para frente.
 
 document.querySelector('.demo3').innerHTML = "Captura de parte da string com Slice: "+resultado3;
 
 
-
-//nome.substr(inicio, quantidades de caracteres)
+// 4 ----------------------
+// nome.substr(inicio, quantidades de caracteres)
 let resultado4 = nome.substr(14, 8);//funciona com negativo.
 //substring não aceira valor negativo.
 
 document.querySelector('.demo4').innerHTML = "Captura ' Substr ': "+resultado4;
 
+// 5 -------------------------------------------------------------
 //Substituir um texto dentro da string
 
 let resultado5 = nome.replace('Ferreira', 'Uzumaki');
 
-document.querySelector('.demo5').innerHTML = "Substituição do nome "+nome+ " com ' Replace ' :"+resultado5;
+document.querySelector('.demo5').innerHTML = "Substituição do nome "+nome+ " com ' Replace ' : "+resultado5;
+
+// 6. -----------------------------------------------------------
+//Usando trim ----------------
+
+let nome2 = '      Geovane       ';
+let resultado6 = nome2.trim();
+
+console.log(resultado6.length);
+
+document.querySelector('.demo6').innerHTML = "Em nome "+nome2+ " remover espaços com ' Trim ' : "+resultado6;
+
+// 7. ------------------------------------------------------------
+//CharAt --------------------
+let resultado7 = nome.charAt(2);
+
+
+document.querySelector('.demo7').innerHTML = "Em nome "+nome+ ", quem está na posição 2, usando ' CharAt '? : "+resultado7;
+
+// 8. -----------------------------------------------------------
+//Split
+let resultado8 = nome.split(' ');
+
+console.log(resultado8)
+
+document.querySelector('.demo8').innerHTML = "Transformar "+nome+ ", em array e dividindo pela condição , usando ' Split ' : "+resultado8;
+
+// Método de Numbers ---------------------------------------------
+
+//1. -----------------
+//toString
+let n = 10;
+
+let res = n.toString();
+
+console.log(res);
+
+document.querySelector('.numb1').innerHTML = "Transformar "+n+ ", em string! ver no console, usando ' toString ' ";
+
+// 2. ---------------
+// toFixed
+let n2 = 10.6546572645;
+
+let res2 = n2.toFixed(2);
+
+console.log(res2);
+
+document.querySelector('.numb2').innerHTML = " Usando ' toFixed ' o número "+n2+ ", imprime somente a quantidade de casas decimais da condição =  "+res2;
+
+// 3. ----------------
+// parseInt, tranforma em número inteiro.
+
+let n3 = '25';// No caso de 25.9 o partInt exclui os decimais.
+
+let res3 = parseInt(n3) + 5; 
+
+console.log(res3);
+
+document.querySelector('.numb3').innerHTML = " Usando ' parseInt ' transforma a string "+n3+ ", em número inteiro + 5 = "+res3;
+
+//4. --------------------
+//parseFloat mantem o decinal.
+
+let n4 = '25.9';
+
+let res4 = parseFloat(n4) + 5; 
+
+console.log(res4);
+
+document.querySelector('.numb4').innerHTML = " Usando ' parseInt ' transforma a string "+n4+ ", em número decimal + 5 = "+res4;
+
+// Métodos de Arrays -----------------------------------------------------
+
+// 1. --------------------
+// toString transforma o Array em string
+let lista = ['Ovo', 'Farinha', 'Leite', 'Fermento'];
+
+let res5 = lista.toString();
+
+console.log(res5);
+
+document.querySelector('.array1').innerHTML = " Usando ' toString ' transforma o Array "+lista+ ", em uma string = "+res5;
+
+// 2. join, transforma em string separando pelo parâmetro.
+
+let res6 = lista.join('--');
+
+console.log(res6);
+
+document.querySelector('.array2').innerHTML = " Usando ' join ' transforma o Array "+lista+ ", em uma string separada pelo parâmetro = "+res6;
+
+//3. indexOf 
+
+let res7 = lista.indexOf('Ovo');
+
+console.log(res7);
+
+document.querySelector('.array3').innerHTML = " Usando ' indexOf ' localize o parãmetro 'Ovo' em "+lista+ " , indique a posição. Posição = "+res7;
+
+// 4. pop remove o último Array. 
+
+lista.pop();
+
+let res8 = lista;
+
+console.log(res8);
+
+document.querySelector('.array4').innerHTML = " Usando ' pop ' Ele remove o ùltimo item da lista: 'Ovo', 'Farinha', 'Leite', 'Fermento' , Lista = "+res8;
+
+//5. shift remove o primeiro item da lista. 
+
+lista.shift();
+
+let res9 = lista;
+
+console.log(res9);
+
+document.querySelector('.array5').innerHTML = " Usando ' shift ' Ele remove o Primeiro item da lista: 'Ovo', 'Farinha', 'Leite', 'Fermento' , Lista = "+res9;
+
+//6. push adiciona itens ao array
+
+lista.push('Ovo', 'Fermento');
+
+let res10 = lista;
+
+console.log(res10);
+
+document.querySelector('.array6').innerHTML = " Usando ' push ' Ele adiciona itens na lista: 'Farinha', 'Leite'. = Lista : "+res10;
+
+// 7. adicionando com []
+
+lista[4]= 'Chocolate';
+
+let res11 = lista;
+
+console.log(res11);
+
+document.querySelector('.array7').innerHTML = " Usando ' lista[4] = 'Chocolate' . ' Ele adiciona itens na lista:Farinha,Leite,Ovo,Fermento, = Lista : "+res10;
+
+// 8. splice exclui elementos do array
+
+lista.splice(2, 1);// (posição do item, quantidade de itens)
+
+
+let res12 = lista;
+
+console.log(res12);
+
+document.querySelector('.array8').innerHTML = " Usando ' splice ' Ele remove itens da lista:Farinha,Leite,Ovo,Fermento,Chocolate.  Lista = "+res12;
+
+// 9. concat, junta dois arrays em um.
+
+let lista2 = ['Prato','Batedeira','Forno'];
+
+let res13 = lista.concat(lista2);
+
+console.log(res13);
+
+document.querySelector('.array9').innerHTML = " ' concat ' Soma lista :Farinha, Leite, Ovo, Fermento, Chocolate. a Lista: "+lista2+ " = "+res13;
+
+lista.push('Ovo');
+
+// 10. sort, ordena em ordem alfabética 
+
+lista.sort();
+
+// lista.reverse(); inverte a ordem do final do começo. 
+
+let res14 = lista;
+
+console.log(res14);
+
+document.querySelector('.array10').innerHTML = " ' sort ' Organiza a Lista: Farinha, Leite, Ovo, Fermento, Chocolate. em ordem alfabética = "+res14;
+
+// 11. map, mapeia a os elementos, posibilitando rodar uma função
+
+let listaNu = [45, 4, 9, 16, 25];
+let listaNu2 = [];
+
+listaNu2 = listaNu.map(function(item) {
+    return item * 2;
+});
+
+let resNu = listaNu2;
+
+console.log(resNu);
+
+document.querySelector('.array11').innerHTML = " Multiplicando itens do Array usando ' map ', listaNu: [45, 4, 9, 16, 25] = [ "+resNu+"]";
+
+//12. filter, filtra a condição que for adicionada na função
+
+listaNu2 = listaNu.filter(function(item){
+    if(item < 20) {
+        return true;
+    } else {
+        return false;
+    }
+});
+
+let resNu2 = listaNu2;
+
+console.log(resNu2);
+
+document.querySelector('.array12').innerHTML = "Filtrando itens do Array usando ' filter ', wm listaNu: [45, 4, 9, 16, 25] menor que 20 = ["+resNu2+"]";
+
+//13. every, todos tem que atender a condição. 
+
+listaNu2 = listaNu.every(function(item){
+    return (item > 20)? true: false;
+});
+
+let resNu3 = listaNu2;
+
+console.log(resNu3);
+
+document.querySelector('.array13').innerHTML = "Filtrando itens do Array usando ' every ', em listaNu: [45, 4, 9, 16, 25] se todos são menores que 20, se sim 'true' se não 'false' = "+resNu3+".";
+
+//14. find, procura um item no array, e retorna o primeiro encontrado. 
+// o findIndex retorna a posição do primeiro item que satisfaça a condição.
+
+listaNu2 = listaNu.find(function(item){// usando findIndex vai retornar '3'
+    return (item == 16)? true: false;
+});
+
+let resNu4 = listaNu2;
+
+console.log(resNu4);
+
+document.querySelector('.array14').innerHTML = "Filtrando itens do Array usando ' find ', em listaNu: [45, 4, 9, 16, 25] se tem item == 16, se sim retornará o item = "+resNu4+".";
+
+// 1. Datas
+
+let d = new Date();
+
+let newdate = d.getFullYear();// getMonth = mês, getDate = dia  ,getDay = dia da Semana, getHours = Horas, getSeconds = segundos, getMilliseconds = milisegundos, getTime = milisegundos de 1970 até hoje.
+
+console.log(newdate);
+
+document.querySelector('.data1').innerHTML = " Ano = "+newdate+".";
+
+// 2. setFullYear, trocando o ano
+// set usa as mesmas terminações do get.
+
+let d2 = new Date();
+
+d2.setFullYear(2022);
+
+let newdate2 = d2;
+
+console.log(newdate2);
+
+document.querySelector('.data2').innerHTML = " Trocando o Ano = "+newdate2+".";
+
+// 3. setDate pode adicionar condição no método. 
+
+let d3 = new Date();
+
+d3.setDate( d3.getDate() + 5 );
+
+let newdate3 = d3;
+
+console.log(newdate3);
+
+document.querySelector('.data3').innerHTML = " Adicionando 5 dias a data [ "+d+" ] = "+newdate3+".";
+
+// Matemática ------------------------------------------------
+// 1. 
+// round, arredonda para cima depois o.50 e 0.49 para baixo. 
+// floor sempre arredonda para cima.
+// ceil sempre apara cima.
+
+let nValor = Math.round(3.50);
+
+console.log(nValor);
+
+document.querySelector('.mate1').innerHTML = " Arredondando números com 'round' = "+nValor+".";
+
+// 2. mim e max
+let nLista = (45, 63, 100, 254, 17);
+
+let min = Math.min(45, 63, 100, 254, 17);
+let max = Math.max(45, 63, 100, 254, 17);
+
+console.log(min, max);
+
+document.querySelector('.mate2').innerHTML = " Na lista (45, 63, 100, 254, 17), menor valor = "+min+", e o maior valor = "+max;
+
+// 3. random, retorna um número aleatório entre 0 e 1. combinando com o floor retorna maior que 1.
+
+let nValor3 = Math.floor( Math.random() * 100 );
+
+console.log(nValor3);
+
+document.querySelector('.mate3').innerHTML = " random, retorna um número aleatório entre 0 e 1. combinando com o floor retorna maior que 1 = "+nValor3;
+
+// Intervalos ---------------------------------------------------
+
+// 1. Hora / Timer
+
+let timer;
+
+function comecar() {
+    timer = setInterval(showTime, 1000);
+}
+
+function parar() {
+    clearInterval(timer);
+}
+
+function showTime() {
+    let d = new Date();
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+    let txt = h+':'+m+':'+s;
+
+    document.querySelector('.inter1').innerHTML = " Hora; "+txt;
+}
+
+// 2. SetTimeout, setar depois de um tempo determinado
+
+let timer2
+
+function rodar() {
+    timer2 = setTimeout( function() {
+        document.querySelector('.inter2').innerHTML = " Rodou ";
+    },2000 );
+};
+function parar2() {
+    clearTimeout(timer2);
+};
+
+// Template Strings
+
+// 1 
+
+let nome3 = 'Geovane';
+
+let idade = 32;
+
+let frase = `Meu nome é ${nome3}, eu tenho ${idade}, e ano que vem farei ${idade + 1}.`;
+
+console.log(frase);
+
+document.querySelector('.temp').innerHTML = frase;
+
+// 
