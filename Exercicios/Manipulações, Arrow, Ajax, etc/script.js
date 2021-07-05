@@ -389,4 +389,137 @@ console.log(frase);
 
 document.querySelector('.temp').innerHTML = frase;
 
-// 
+// Desconstruindo Objetos
+
+// 1. 
+
+let pessoa = {
+    nome4:'Geovane',
+    sobrenome:'Sá',
+    idade2:32,
+    social:{
+        facebook:'facebook',
+        instagram:'instagram'
+    }, 
+    nomeCompleto: function() {
+        return `${this.nome4} ${this.sobrenome}`;
+    }
+    
+};
+
+let { nome4, sobrenome, idade2 } = pessoa;
+// pode mudar o nome da variavel "nome4:Geovane" ou colocar um valor caso a mesma não esteja definida "idade=0" .
+
+console.log( nome4, sobrenome, idade2 );
+
+document.querySelector('.desc1').innerHTML = nome4+' , '+sobrenome+' , '+idade2;
+
+// 2. descontruindo elementos dentro do social
+
+let pessoa2 = {
+    nome5:'Geovane',
+    sobrenome2:'Sá',
+    idade3:32,
+    social2:{
+        facebook:'facebook',
+        instagram:'instagram'
+    }, 
+    nomeCompleto: function() {
+        return `${this.nome4} ${this.sobrenome}`;
+    }
+    
+};
+
+let { facebook } = pessoa.social;// selecionar dentro do social
+console.log( facebook );
+
+
+let { nome5, idade3, social2:{ instagram } } = pessoa2;
+console.log( nome5, idade3, instagram );
+
+document.querySelector('.desc2').innerHTML = nome5+', '+idade3+', '+instagram+', '+facebook;
+
+//3 . 
+
+let pessoa3 = {
+    nome6:'Geovane',
+    sobrenome3:'Sá Ferreira',
+    idade3:32,
+    social2:{
+        facebook:'facebook',
+        instagram:'instagram'
+    }, 
+};
+
+function pegarNomeCompleto({nome6, sobrenome3}) {
+    return `${nome6} ${sobrenome3}`;
+}
+
+console.log( pegarNomeCompleto(pessoa3) );
+
+document.querySelector('.desc3').innerHTML = pegarNomeCompleto(pessoa3);
+
+// --------------------------------------------------------------------
+
+
+//Desconstruindo Arrays
+
+// 1. desconstruindo o array e nomeando as variáveis
+
+let info = [ 'Geovanede Ferreira', 'Geovane', 'Ferreira', 'geovane-portfolio' ];
+
+let [ , nome7, sobrenome4 ] = info;
+
+console.log( nome7, sobrenome4);
+
+document.querySelector('.desArray1').innerHTML = `${nome7} ${sobrenome4}`;
+
+
+// 2. criando variáveis,  criando e descontruindo o array junto.
+
+let [ nome8, sobrenome5 ] = [ 'Geovane', 'Ferreira' ];
+
+console.log( nome8, sobrenome5);
+
+document.querySelector('.desArray2').innerHTML = `${nome8} ${sobrenome5}`;
+
+// 3. criando e descontruindo através de uma função
+
+function criar() {
+    return [1,2,3];
+}
+
+let [a,b,c] = criar();
+
+console.log(a,b,c);
+
+document.querySelector('.desArray3').innerHTML = `${a}, ${b}, ${c}.`;
+
+// Arrow functions, a mesma não suportya o "This".
+
+// 1. utilizando o arrow 
+
+/*
+function somar(x,y) {
+    return x + y;
+}
+
+let somar = function(x, y) {
+    return x+y;
+}
+*/
+
+let somar = (x, y) => x + y;
+
+console.log( somar(10, 5));
+
+
+document.querySelector('.arrow1').innerHTML = `Soma =${somar(10, 5)}.`;
+
+// 2. 
+
+let letrasNoNome = nome => nome.length;
+
+console.log( letrasNoNome( 'Geovane' ));
+
+document.querySelector('.arrow2').innerHTML = `Quantidade de letras em nome =  ${letrasNoNome( 'Geovane' )}.`;
