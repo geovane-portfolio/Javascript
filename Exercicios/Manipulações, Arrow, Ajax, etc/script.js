@@ -495,6 +495,8 @@ console.log(a,b,c);
 
 document.querySelector('.desArray3').innerHTML = `${a}, ${b}, ${c}.`;
 
+//----------------------------------------------------------------------
+
 // Arrow functions, a mesma não suportya o "This".
 
 // 1. utilizando o arrow 
@@ -523,3 +525,153 @@ let letrasNoNome = nome => nome.length;
 console.log( letrasNoNome( 'Geovane' ));
 
 document.querySelector('.arrow2').innerHTML = `Quantidade de letras em nome =  ${letrasNoNome( 'Geovane' )}.`;
+
+// -------------------------------------------------------------------
+
+// Operador Spread
+// 1. 
+
+let info2 = {
+    nome9: 'Geovane',
+    sobrenome6:'Ferreira',
+    idade4:32
+};
+
+let novaInfo = {
+    ...info2,
+    cidade: 'Palhoça',
+    estado:'Santa Catarina',
+    pais:'Brasil'
+};
+
+console.log( novaInfo );
+
+
+document.querySelector('.sped1').innerHTML = `${JSON.stringify(novaInfo)}.`;
+
+//2. 
+
+function addInfo(info2) {
+    let novasInfo = {
+        ...info2,
+        status:0
+    }
+    return novasInfo;
+ 
+}
+
+console.log( addInfo( {nome, sobrenome} ) );
+
+let resut = addInfo(info2);
+
+// `${JSON.stringify( )}.` tranforma em estring o objeto
+document.querySelector('.sped2').innerHTML = `${JSON.stringify(resut)}.`;
+
+//---------------------------------------------------------------------
+
+// Operador Rest "..."
+// 1.
+
+function add(...numeros) {
+    console.log(numeros);  
+
+    return numeros; // para imprimir no innerhtml, necessario return.
+}
+
+let resut2 = add( 1,2,3,4,5,6 );
+
+document.querySelector('.rest1').innerHTML = `${ JSON.stringify(resut2) }.`;
+
+// 2. 
+
+function add2(nomes, ...novosNomes) {
+    let novoConjunto = [
+        ...nomes, // spread
+        ...novosNomes // Rest
+    ];
+
+    return novoConjunto;
+}
+
+let nomes = ["Geovane", "Paulo"];
+
+let outros = add2(nomes, "Antonio", "Maria", "José");
+
+console.log(outros);
+
+document.querySelector('.rest2').innerHTML = `${ JSON.stringify(outros) }.`;
+
+// ---------------------------------------------------------------------
+
+//Includes e repeat
+//1. 
+
+let mercado = [ 'ovo', 'café', 'arroz', 'feijão', 'macarrão' ];
+
+console.log( mercado.includes('carne') );
+
+document.querySelector('.ir1').innerHTML = `Em lista mercado:( ${mercado} ), tem o item carne? R: ${ mercado.includes('carne') }.`;
+
+// 2.
+
+let so = ' Linux ';
+
+console.log( so.repeat(30) );
+
+document.querySelector('.ir2').innerHTML = `Utilizando ' repat ' em :( ${so} ), 30 vezes? R: ${ so.repeat(30) }.`;
+
+// ------------------------------------------------------------------
+
+// Objeto: Keys, Values e Entries
+
+// 1. keys 
+
+let lista3 = [ 'ovo', 'café', 'arroz', 'feijão', 'macarrão' ]
+
+console.log( Object.keys(lista3) );
+
+document.querySelector('.kve1').innerHTML = `Utilizando ' keys ' em :( ${lista3} ), ele retorna o indice. R: ${ Object.keys(lista3) }.`;
+
+// 2. Values 
+
+document.querySelector('.kve2').innerHTML = `Utilizando ' Values ' em :( ${lista3} ), ele retorna os valores. R: ${ Object.values(lista3) }.`;
+
+// 3. Entries
+
+document.querySelector('.kve3').innerHTML = `Utilizando ' Entries ' em :( ${lista3} ), ele retorna um arrey com o index e o valor. R: ${ Object.entries(lista3) }.`;
+
+// 4. Keys na função
+
+let pessoa4 = {
+    nome10: 'Geovane',
+    sobrenome7:'Ferreira',
+    idade5:32
+};
+
+document.querySelector('.kve4').innerHTML = `Utilizando ' keys na função ' em :( ${ JSON.stringify(pessoa4) } ), ele retorna todas as chaves. R: ${ Object.keys(pessoa4) }.`;
+
+
+// -----------------------------------------------------------------
+// String, padStart, padEnd
+
+let telefone = '48 988';
+
+console.log( telefone.padEnd( 11, '*' ) );
+
+document.querySelector('.spp1').innerHTML = ` ' padEnd ' em :( ${ JSON.stringify(telefone) } ), ele completa com ' * ' até completar a quantidade de caracteres estipulado. R: ${ telefone.padEnd( 11, '*' ) }.`;
+
+// padStart
+
+document.querySelector('.spp2').innerHTML = ` ' padStart ' em :( ${ JSON.stringify(telefone) } ), ele completa antes do conteúdo com ' * ' até completar a quantidade de caracteres estipulado. R: ${ telefone.padStart( 11, '*' ) }.`;
+
+// Ocultando dígitos do cartão
+
+let cartao = '1234123412341234';
+
+let lastDigits = cartao.slice(-4);
+
+let cartaoMascarado = lastDigits.padStart( 16, '*' );
+
+console.log( 'Este é o seu cartão? '+cartaoMascarado );
+
+document.querySelector('.spp3').innerHTML = ` ' padStart ' em :( ${ JSON.stringify(cartao) } ), ele ocultará com ' * ' e só mostrará 4 últimos dígitos. R: ${ cartaoMascarado }.`;
