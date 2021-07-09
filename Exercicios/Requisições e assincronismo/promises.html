@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+    <!-- Css -->
+    <style>
+    * {
+        background-color: #222;
+        color: #fff;
+        font-family:sans-serif;
+    }
+    </style>
+
+<body>
+    <h1 id="titulo"> Promises </h1>
+
+    <h3>Abra o console</h3>
+
+
+
+    <!-- Colocar o script no final do body -->
+    <script>
+        // Promises
+
+        function pegarTemperatura() {
+            return new Promise( function(resolve, reject) {
+                console.log( "pegando temperatura..." );
+
+                setTimeout( function() {
+                    resolve('40 na sombra!');
+                },2000);
+            });
+        };
+
+        // usando a promises
+
+        let temp = pegarTemperatura();// recebe o resultado da função
+
+        temp.then( function(resultado) { // se funcionou, imprime resultado
+            console.log(`Temperatura: ${resultado} `);
+        });
+
+        temp.catch(function(error)  { // se não funcionou imprime erro.
+            console.log('Eita, deu erro"');
+        });
+      
+    </script>
+</body>
+</html>

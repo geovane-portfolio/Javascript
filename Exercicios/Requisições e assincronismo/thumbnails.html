@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnails</title>
+</head>
+
+    <!-- Css -->
+    <style>
+    * {
+        background-color: #222;
+        color: #fff;
+        font-family:sans-serif;
+    }
+    input {
+        padding: 10px;
+        border: 1px solid #555;
+        border-radius: 5px;
+    }
+    button {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #555;
+    }
+    </style>
+
+<body>
+
+    <input type="file" accept="image/*" id="imagem"/><br/>
+
+    <button onclick="mostrar()">Mostrar imagem</button><br/>
+
+    <div id="area"></div>
+
+    <!-- Javascript -->
+    <script>
+        // Thumbnails
+
+
+        async function mostrar() {
+            let imagem = document.getElementById('imagem').files[0];
+
+            let img = document.createElement('img');
+            img.src = URL.createObjectURL(imagem);
+            img.width = 400;
+
+            document.getElementById('area').appendChild(img);
+        }
+
+       
+      
+    </script>
+
+</body>
+</html>

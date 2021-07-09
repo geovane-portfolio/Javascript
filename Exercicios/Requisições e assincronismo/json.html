@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!-- Css -->
+    <style>
+    * {
+        background-color: #222;
+        color: #fff;
+        font-family:sans-serif;
+    }
+    </style>
+
+<body>
+    <h1 id="titulo"> JSON </h1>
+
+    <h3>Abra o console</h3>
+
+
+
+    <!-- Colocar o script no final do body -->
+    <script>
+        // Json
+
+        let pessoa = {
+            nome:"Geovane", 
+            idade:32,
+            estetica: {
+                altura: 172,
+                peso: 78
+            },
+            caracteristicas: [
+                'Engraçado',
+                'Inteligente',
+                'Copetente'
+            ]
+            
+        };
+
+
+        console.log(pessoa);
+
+        console.log(pessoa.caracteristicas);
+
+        console.log(pessoa.caracteristicas[1]);
+
+        console.log(pessoa.estetica);
+
+        console.log(pessoa.estetica.altura);
+
+        //----------------------------------
+
+        // transformando sring em json. com JSON.parse
+
+        let pessoa2 = JSON.parse( '{"nome": "Geovane", "idade":32}' );
+
+        console.log(pessoa2);
+
+        //----------------------------------
+
+        // Transfornado json em string, com JSON.stringify
+
+        let pessoa3 = JSON.stringify( {nome: "Geovane", idade:32} );
+
+        console.log(pessoa3);
+
+
+
+    </script>
+</body>
+</html>

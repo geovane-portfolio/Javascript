@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de arquivos</title>
+</head>
+
+    <!-- Css -->
+    <style>
+    * {
+        background-color: #222;
+        color: #fff;
+        font-family:sans-serif;
+    }
+    </style>
+
+<body>
+    <input type="file"  id="arquivo"/>
+
+    <button onclick="enviar()">Enviar</button>
+
+    <!-- Colocar o script no final do body -->
+    <script>
+        // Upload de arquivos com JS
+
+
+        async function enviar() {
+            let arquivo = document.getElementById('arquivo').files[0];//files[0] determina que seja utilizado o primeiro arquivo selecionado.
+
+            let body = new FormData();
+            body.append('title', 'bla bla bla');
+            body.append('arquivo', arquivo);
+        
+
+            let req = await fetch( 'https://www.meusite.com.br/upload',{
+                method:'POST',
+                body:body,
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });    
+        }
+
+       
+      
+    </script>
+</body>
+</html>

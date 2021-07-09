@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async e Await</title>
+</head>
+
+    <!-- Css -->
+    <style>
+    * {
+        background-color: #222;
+        color: #fff;
+        font-family:sans-serif;
+    }
+    </style>
+
+<body>
+    <button onclick="loadPosts()">Carregar Posts</button>
+
+    <button onclick="insertPost()">Inserir Posts</button>
+
+    <div id="posts"></div>
+
+    <div id="posts2"></div>
+
+    <!-- Colocar o script no final do body -->
+    <script>
+        // Async e Await
+
+
+        async function loadPosts() {
+            document.getElementById('posts').innerHTML = 'Carregando...';
+
+            let req = await fetch( 'https://jsonplaceholder.typicode.com/posts');
+            let json = await req.json();
+            montarBlog(json);
+                
+        }
+
+
+        function montarBlog(lista) {
+            let html = '';
+
+            for(let i in lista) {
+                html += '<h3>'+lista[i].title+'</h3>';
+                html += lista[i].body+'<br/>';
+                html += '<hr/>';
+            }
+
+            document.getElementById('posts').innerHTML = html;
+        }
+
+
+        // Inserir Post
+
+        async function insertPost() {
+            document.getElementById('posts2').innerHTML = 'Carregando...';
+
+            let req = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'GET'
+            });
+            let json = await req.json();
+
+            console.log(json);
+        }
+
+      
+    </script>
+</body>
+</html>
