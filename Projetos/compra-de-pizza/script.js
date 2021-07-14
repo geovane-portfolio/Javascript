@@ -83,6 +83,22 @@ cs('.pizzaInfo--size').forEach( (size, sizeIndex)=> {// add peso
 });
 
 c('.pizzaInfo--addButton').addEventListener('click', ()=>{
-    //qual a pizza, tamanho e quantidade
+    let size =  parseInt(c('.pizzaInfo--size.selected').getAttribute('data-key'));
 
+    let identifier = pizzaJson[modalKey].id+'@'+size;
+
+    let key = cart.findIndex((item)=>item.identifier == identifier);
+
+    if(key > -1) {
+        cart[key].qt += modalQt;
+    } else {
+        cart.push({
+            identifier,
+            id:pizzaJson[modalKey].id,
+            size,
+            qt:modalQt
+        });
+    }
+
+    closeModal();
 });
