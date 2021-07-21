@@ -1,4 +1,5 @@
 * {
+    background-color: rgb(92, 159, 246);
 }
 aside {
     position: fixed;
@@ -31,6 +32,7 @@ aside {
     padding: 10px;
     color: #555;
     cursor: pointer;
+    background: #ccc;
 }
 #menu-area li:hover {
     background-color: #ddd;
