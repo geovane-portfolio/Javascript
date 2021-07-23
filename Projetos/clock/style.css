@@ -30,10 +30,6 @@ h1 {
     border: 5px solid #FFF;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.2);
-    background-image: url(javascript.png);
-    background-position:center;
-    background-size: 100px;
-    background-repeat: no-repeat;
 }
 
 .riscos {
