@@ -1,12 +1,12 @@
 document.querySelector('.busca').addEventListener('submit', async (event)=>{
-    event.preventDefault()  //previni o envio do formulário
+    event.preventDefault() 
 
     let input = document.querySelector('#searchInput').value;
 
     if(input !== '') {
         showWarning('Carregando...');
 
-        let url = `https://api.openweathermap.org/data/2.5/weather?q={${encodeURI(input)}}&appid=a09be96cd312856cede25c063d2d295d&units=metric&lang=pt_br`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q={${encodeURI(input)}}&appid=&units=metric&lang=pt_br`;
 
         let results = await fetch(url);
         let json = await results.json();
