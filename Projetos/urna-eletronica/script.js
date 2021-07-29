@@ -113,16 +113,23 @@ function confirma() {
         });
     }
 
-    if(votoConfirmado) {
+    if(votoConfirmado == true) {
         etapaAtual++;
         if(etapas[etapaAtual] !== undefined) {
             comecarEtapa();
         } else {
             document.querySelector('.tela').innerHTML =  `<div class="aviso--gigante pisca">FIM</div>`;
             console.log(votos);
+            document.querySelector('.teclado--botao.botao--branco').setAttribute('onclick', '') ;
+            document.querySelector('.teclado--botao.botao--corrige').setAttribute('onclick', '') ;
+            document.querySelector('.teclado--botao.botao--confirma').setAttribute('onclick', '') ;
         }
     }
+
+    
 }
+
+
 
 comecarEtapa();
 
