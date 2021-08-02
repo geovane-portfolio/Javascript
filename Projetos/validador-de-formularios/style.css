@@ -16,12 +16,12 @@ body {
     align-items: center;
 }
 .leftside img {
-    max-width: 500px;
+    max-width: 200px;
     height: auto;
 }
 .rightside {
     width: 400px;
-    background-color: #666;
+    background-color: #777;
     padding: 50px;
 }
 .rightside label {
