@@ -4,6 +4,7 @@
 body {
     margin: 0;
     background-color: rgb(6, 154, 240);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .screen {
     display: flex;
@@ -12,6 +13,7 @@ body {
 .leftside {
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -19,6 +21,16 @@ body {
     max-width: 200px;
     height: auto;
 }
+.contact {
+    margin-top: 30px;
+}
+.contact a {
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+} 
+
 .rightside {
     width: 400px;
     background-color: #777;
