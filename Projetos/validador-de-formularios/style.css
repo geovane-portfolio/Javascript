@@ -56,3 +56,30 @@ body {
     padding: 4px;
     border-radius: 5px;
 }
+
+@media (max-width: 600px) {
+    .screen {
+        flex-direction: column;
+    }
+    .leftside img {
+        margin-top: 20px;
+        max-width: 150px;
+    }
+    .rightside {
+        width: 90vw;
+        height: auto;
+        border-radius: 20px;
+        margin: 20px auto 20px auto;
+        padding: 20px 50px;
+    }
+    .rightside h1 {
+        text-align: center;
+        margin-top: 0;
+    }
+    .rightside label {
+        margin-bottom: 10px;
+    }
+    .cadastrar, .contact {
+        margin-top: 20px;
+    }
+}
