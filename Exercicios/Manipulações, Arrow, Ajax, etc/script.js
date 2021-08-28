@@ -675,3 +675,18 @@ let cartaoMascarado = lastDigits.padStart( 16, '*' );
 console.log( 'Este é o seu cartão? '+cartaoMascarado );
 
 document.querySelector('.spp3').innerHTML = ` ' padStart ' em :( ${ JSON.stringify(cartao) } ), ele ocultará com ' * ' e só mostrará 4 últimos dígitos. R: ${ cartaoMascarado }.`;
+
+//------------------------------------------------------
+
+Vetor = [5,3,2,4,7,1,0,20,6,10,];
+
+Vetor.sort(function(a,b) {
+    return a - b;
+});
+
+var ordenaNu = "";
+for (var nu = 0; nu < Vetor.length; nu++) {
+    ordenaNu += Vetor[nu] + ",";
+}
+
+//alert(ordenaNu);
