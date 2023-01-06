@@ -64,4 +64,11 @@ Projetos e exercicios em Javascript
       <li>Desenhando na tela.</li>
       <li>Funções e condições.</li>
     </ul><br/>
+  <a href="https://geovane-portfolio.github.io/Javascript/Projetos/contagem-reg-ano-novo/index.html">Projeto Contagem regressiva para o Ano Novos</a> - Funcionalidades em Javascript:<br/>
+    <ul>
+      <li>Manipulação de variáveis.</li>
+      <li>Lógica.</li>
+      <li>Imprimindo resultado.</li>
+      <li>Funções e condições.</li>
+    </ul><br/>
 </div>
