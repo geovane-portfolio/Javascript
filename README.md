@@ -45,7 +45,7 @@ Projetos e exercicios em Javascript
       <li>Manipulação de API.</li>
       <li>Requisição interna.</li>
       <li>Manipulando json.</li>
-      <li>Preenchado elementos.</li>
+      <li>Preenchendo elementos.</li>
       <li>Funções e condições.</li>
     </ul><br/>
   <a href="https://geovane-portfolio.github.io/Javascript/Projetos/jogo-da-velha/index.html">Projeto Jogo da Velha</a> - Funcionalidades em Javascript:<br/>
@@ -53,7 +53,7 @@ Projetos e exercicios em Javascript
       <li>Manipulação de variáveis.</li>
       <li>Lógica.</li>
       <li>Imprimindo resultado.</li>
-      <li>Preenchado elementos.</li>
+      <li>Preenchendo elementos.</li>
       <li>Funções e condições.</li>
     </ul><br/>
   <a href="https://geovane-portfolio.github.io/Javascript/Projetos/canvas-drawing/index.html">Projeto Desenhando com o Canvas</a> - Funcionalidades em Javascript:<br/>
